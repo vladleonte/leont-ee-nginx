@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>leont.ee</title>
+    <style>
+        #scroller {
+            margin: 0;
+            padding: 0;
+            background: #F3F7F0;
+            color: #19323C;
+            width: 100vw;
+            height: 100vh;
+            font-size: 20vh;
+            text-align: center;
+            text-shadow: 2px 2px 2px #A93F55, 4px 4px 2px #A93F55;
+        }
+    </style>
+</head>
+
+<body>
+<div id="scroller">l</div>
+<script>
+    var counter = 0;
+
+    function nextLetter(msg) {
+        var element = document.getElementById("scroller");
+        element.innerText = msg[counter++];
+        if (counter >= msg.length) {
+            counter = 0;
+        }
+    }
+
+    setInterval(nextLetter, 1000, "eont.eel");
+</script>
+</body>
+</html>
