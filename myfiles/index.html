@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>leont.ee</title>
     <style>
-        #scroller {
+        #scroller01 {
             margin: 0;
             padding: 0;
             background: #F3F7F0;
@@ -16,16 +16,38 @@
             text-align: center;
             text-shadow: 2px 2px 2px #A93F55, 4px 4px 2px #A93F55;
         }
+        #scroller02 {
+            margin: 0;
+            padding: 0;
+            background: #F8F9FA;
+            color: #212529;
+            width: 100vw;
+            height: 100vh;
+            font-size: 20vh;
+            text-align: center;
+            text-shadow: 2px 2px 2px #CED4DA, 4px 4px 2px #CED4DA;
+        }
+        #scroller03 {
+            margin: 0;
+            padding: 0;
+            background: #CAF0F8;
+            color: #03045E;
+            width: 100vw;
+            height: 100vh;
+            font-size: 20vh;
+            text-align: center;
+            text-shadow: 2px 2px 2px #00B4D8, 4px 4px 2px #00B4D8;
+        }
     </style>
 </head>
 
 <body>
-<div id="scroller">l</div>
+<div id="scroller02">l</div>
 <script>
     var counter = 0;
 
     function nextLetter(msg) {
-        var element = document.getElementById("scroller");
+        var element = document.getElementById("scroller02");
         element.innerText = msg[counter++];
         if (counter >= msg.length) {
             counter = 0;
