@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>leont.ee</title>
     <style>
-        #scroller01 {
+        .style0 {
             margin: 0;
             padding: 0;
             background: #F3F7F0;
@@ -16,7 +16,8 @@
             text-align: center;
             text-shadow: 2px 2px 2px #A93F55, 4px 4px 2px #A93F55;
         }
-        #scroller02 {
+
+        .style1 {
             margin: 0;
             padding: 0;
             background: #F8F9FA;
@@ -27,7 +28,8 @@
             text-align: center;
             text-shadow: 2px 2px 2px #CED4DA, 4px 4px 2px #CED4DA;
         }
-        #scroller03 {
+
+        .style2 {
             margin: 0;
             padding: 0;
             background: #CAF0F8;
@@ -39,22 +41,35 @@
             text-shadow: 2px 2px 2px #00B4D8, 4px 4px 2px #00B4D8;
         }
     </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDTSEZEHCZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-LDTSEZEHCZ');
+    </script>
 </head>
 
 <body>
-<div id="scroller02">l</div>
+<div id="scroller"></div>
 <script>
     var counter = 0;
+    var styles = ["style0", "style1", "style2"];
 
     function nextLetter(msg) {
-        var element = document.getElementById("scroller02");
-        element.innerText = msg[counter++];
+        var element = document.getElementById("scroller");
+        element.setAttribute("class", styles[1]);
+        element.innerText = element.innerText + msg[counter++];
         if (counter >= msg.length) {
             counter = 0;
+            element.innerText = "";
         }
     }
 
-    setInterval(nextLetter, 1000, "eont.eel");
+    setInterval(nextLetter, 500, "leont.ee ");
 </script>
 </body>
 </html>
