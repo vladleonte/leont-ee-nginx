@@ -59,17 +59,22 @@
     var counter = 0;
     var styles = ["style0", "style1", "style2"];
 
-    function nextLetter(msg) {
+    function nextLetter(msg, append=false) {
         var element = document.getElementById("scroller");
         element.setAttribute("class", styles[1]);
-        element.innerText = element.innerText + msg[counter++];
+        if (append) {
+            element.innerText = element.innerText + msg[counter++];
+        } else {
+            element.innerText = msg[counter++];
+        }
         if (counter >= msg.length) {
             counter = 0;
             element.innerText = "";
         }
     }
 
-    setInterval(nextLetter, 500, "leont.ee ");
+    setInterval(nextLetter, 1000, "leont.ee ", false);
+    // setInterval(nextLetter, 500, "leont.ee ", true);
 </script>
 </body>
 </html>
