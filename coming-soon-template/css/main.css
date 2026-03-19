@@ -5,7 +5,8 @@
 a,
 a:focus,
 a:hover {
-  color: #fff; }
+  color: #fff;
+  text-decoration: none; }
 
 /* Custom default button */
 .btn-default {
@@ -35,8 +36,23 @@ body {
   text-align: center;
   font-family: 'Quicksand', sans-serif; }
 
+#backgroundVideo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: table;
   width: 100%;
   height: 100%;
@@ -93,17 +109,20 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 10px;
-  font-size: 2rem;
-  margin-bottom: 5rem; }
+  font-size: 2.5rem;
+  margin-bottom: 2rem; }
+
+.cover-copy {
+  max-width: 500px;
+  font-size: 1rem;
+  margin: 0 auto 3rem; }
 
 @media (min-width: 768px) {
   .cover-heading {
     font-size: 3.4rem;
-    letter-spacing: 15px; } }
-
-.cover-copy {
-  max-width: 500px;
-  margin: 0 auto 3rem; }
+    letter-spacing: 15px; }
+  .cover-copy {
+    font-size: 1.25rem; } }
 
 /*
  * Footer
@@ -114,25 +133,56 @@ body {
   color: rgba(255, 255, 255, 0.5); }
 
 /*
- * Subscribe modal box
+ * Timer
  */
-#subscribeModal .modal-content {
-  background-color: #303546;
-  color: #fff;
-  text-align: left; }
+#timer {
+  min-height: 150px; }
 
-#subscribeModal .modal-header, #subscribeModal .modal-footer {
-  border: 0; }
+#timer div {
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  padding: 20px 10px;
+  min-height: 80px;
+  width: 80px;
+  margin-bottom: 1rem; }
 
-#subscribeModal .close {
-  color: #fff; }
+#timer span {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.6px; }
 
-#subscribeModal .form-control {
-  margin-top: 1rem;
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff; }
-  #subscribeModal .form-control:focus {
-    border-color: #49506a; }
+#days {
+  font-size: 2rem; }
+
+#hours {
+  font-size: 2rem; }
+
+#minutes {
+  font-size: 2rem; }
+
+#seconds {
+  font-size: 1.5rem; }
+
+@media (min-width: 768px) {
+  #timer {
+    min-height: 200px; }
+  #timer div {
+    padding: 20px;
+    min-height: 100px;
+    width: 120px;
+    margin-bottom: 3rem; }
+  #days {
+    font-size: 5rem; }
+  #hours {
+    font-size: 5rem; }
+  #minutes {
+    font-size: 5rem; }
+  #seconds {
+    font-size: 3rem; } }
 
 /*
  * Affix and center
